@@ -29,6 +29,6 @@ class Album extends Component {
     );
   }
 }
-console.log(album)
+
 
 export default Album;
