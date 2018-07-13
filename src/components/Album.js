@@ -25,6 +25,23 @@ class Album extends Component {
           <div id="release-info">{this.state.album.releaseInfo}</div>
          </div>
       </section>
+      <table id="song-list">
+        <colgroup>
+          <col id="song-number-column" />
+          <col id="song-title-column" />
+          <col id="song-duration-column" />
+        </colgroup>
+
+        <tbody>
+        //code for assignment
+          this.state.album.songs.map((songs, index) =>
+           <tr key ={index} />
+           <div>{this.number}</div>
+           <div>{this.title}</div>
+           <div>{this.duration}</div>
+        )
+        </tbody>
+      </table>
       </section>
     );
   }
