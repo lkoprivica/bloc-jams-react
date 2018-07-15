@@ -33,13 +33,15 @@ class Album extends Component {
         </colgroup>
 
         <tbody>
-        //code for assignment
-          this.state.album.songs.map((songs, index) =>
-           <tr key ={index} />
-           <div>{this.number}</div>
-           <div>{this.title}</div>
-           <div>{this.duration}</div>
-        )
+        //code for assignment components: album
+          {this.state.album.songs.map((songs, index) =>
+           <tr key ={index}>
+           <div>{songs.number}</div>
+           <div>{songs.title}</div>
+           <div>{songs.duration}</div>
+           </tr>
+          )
+          }
         </tbody>
       </table>
       </section>
