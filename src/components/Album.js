@@ -31,14 +31,13 @@ class Album extends Component {
           <col id="song-title-column" />
           <col id="song-duration-column" />
         </colgroup>
-
+//code for assignment components: album
         <tbody>
-        //code for assignment components: album
           {this.state.album.songs.map((songs, index) =>
-           <tr key ={index}>
-           <div>{songs.number}</div>
-           <div>{songs.title}</div>
-           <div>{songs.duration}</div>
+           <tr key={index}>
+           <td>{songs.index}</td>
+           <td>{songs.title}</td>
+           <td>{songs.duration}</td>
            </tr>
           )
           }
