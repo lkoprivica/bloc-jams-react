@@ -27,13 +27,6 @@ class Album extends Component {
       </section>
       <table id="song-list">
         <colgroup>
-<<<<<<< HEAD
-          <col id="song-number-column">
-          <col id="song-title-column">
-          <col id="song-duration-column">
-        </colgroup>
-        <tbody>
-=======
           <col id="song-number-column" />
           <col id="song-title-column" />
           <col id="song-duration-column" />
@@ -48,13 +41,11 @@ class Album extends Component {
            </tr>
           )
           }
->>>>>>> assignment-components-album
         </tbody>
       </table>
       </section>
     );
   }
 }
-
 
 export default Album;
