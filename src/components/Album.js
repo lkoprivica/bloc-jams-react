@@ -18,7 +18,7 @@ class Album extends Component {
     this.audioElement.src = album.songs[0].audioSrc;
   }
 
-  play() {
+    play() {
       this.audioElement.play();
       this.setState({ isPlaying: true });
     }
@@ -42,6 +42,22 @@ class Album extends Component {
          this.play();
        }
      }
+//assignment audio playback
+  getInitialState() {
+    return {
+      isMouseInside: false
+    };
+  }
+
+onMouseEnter(){
+  this.setState({isMouseInside: true });
+}
+onMouseLeave(){
+  this.setState({isMouseInside: false });
+}
+
+
+
 
   render() {
     return (
@@ -72,6 +88,20 @@ class Album extends Component {
           }
         </tbody>
       </table>
+
+      //assignment audio playback
+      <span className="ion-md-play"></span>
+      <span className="ion-md-pause"></span>
+        <div onMouseEnter={this.onMouseEnter } onMouseLeave= {this.onMouseLeave}>
+          if({this.state.isMouseInside && this.state === "play"}){
+            return  <span className="ion-md-play"></span>
+          }
+            return <span className="ion-md-pause"></span>
+          }
+
+      <ion-icon name="pause"></ion-icon>
+      <ion-icon name="play"></ion-icon>
+
       </section>
     );
   }
