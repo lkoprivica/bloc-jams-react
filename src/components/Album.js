@@ -56,9 +56,6 @@ onMouseLeave(){
   this.setState({isMouseInside: false });
 }
 
-
-
-
   render() {
     return (
       <section className="album">
@@ -88,23 +85,32 @@ onMouseLeave(){
           }
         </tbody>
       </table>
-
-      //assignment audio playback
-      <span className="ion-md-play"></span>
-      <span className="ion-md-pause"></span>
-        <div onMouseEnter={this.onMouseEnter } onMouseLeave= {this.onMouseLeave}>
-          if({this.state.isMouseInside && this.state === "play"}){
-            return  <span className="ion-md-play"></span>
-          }
-            return <span className="ion-md-pause"></span>
-          }
-
-      <ion-icon name="pause"></ion-icon>
-      <ion-icon name="play"></ion-icon>
-
       </section>
     );
   }
 }
+
+  //assignment audio playback
+
+
+      <span className="ion-md-play" />
+      <span className="ion-md-pause" />
+
+
+     <div onMouseEnter={this.onMouseEnter } onMouseLeave= {this.onMouseLeave}>
+       if(this.state.isMouseInside && this.state === "play"){
+          return  <span className="ion-md-play"></span>
+       }
+          return <span className="ion-md-pause"></span>
+       }
+     </div>
+
+
+      <button>
+        <ion-icon name="pause"></ion-icon>
+        <ion-icon name="play"></ion-icon>
+      </button>
+
+
 
 export default Album;
