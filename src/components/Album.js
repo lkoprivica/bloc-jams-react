@@ -86,22 +86,15 @@ onMouseLeave(){
         </tbody>
       </table>
       </section>
-    );
-  }
-}
-
-  //assignment audio playback
-
-
+//assignment audio playback
       <span className="ion-md-play" />
       <span className="ion-md-pause" />
 
-
      <div onMouseEnter={this.onMouseEnter } onMouseLeave= {this.onMouseLeave}>
        if(this.state.isMouseInside && this.state === "play"){
-          return  <span className="ion-md-play"></span>
+          return  <span className="ion-md-play"/>
        }
-          return <span className="ion-md-pause"></span>
+          return <span className="ion-md-pause"/>
        }
      </div>
 
@@ -110,6 +103,16 @@ onMouseLeave(){
         <ion-icon name="pause"></ion-icon>
         <ion-icon name="play"></ion-icon>
       </button>
+
+
+    );
+  }
+}
+
+
+
+
+
 
 
 
