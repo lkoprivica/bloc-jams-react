@@ -45,7 +45,7 @@ class Album extends Component {
 //assignment audio playback
   getInitialState() {
     return {
-      isMouseInside: false
+      hover: false
     };
   }
 
@@ -87,33 +87,29 @@ onMouseLeave(){
       </table>
       </section>
 //assignment audio playback
+//When I hover over a song, it displays a "play" button in place of the song number.
+if (song.hover){
+  return <ion-icon name="play"></ion-icon>
+}
+//The currently playing song displays a "pause" button in place of the song number.
+else if (song.state.isPlaying === true){
+    return <ion-icon name="pause"></ion-icon>
+}
+//A paused song displays a "play" button in place of the song number.
+else if (song.state.isPlaying === false){
+    return <ion-icon name="play"></ion-icon>
+}
+
       <span className="ion-md-play" />
       <span className="ion-md-pause" />
 
-     <div onMouseEnter={this.onMouseEnter } onMouseLeave= {this.onMouseLeave}>
-       if(this.state.isMouseInside && this.state === "play"){
-          return  <span className="ion-md-play"/>
-       }
-          return <span className="ion-md-pause"/>
-       }
-     </div>
 
 
-      <button>
-        <ion-icon name="pause"></ion-icon>
-        <ion-icon name="play"></ion-icon>
-      </button>
+
 
 
     );
   }
 }
-
-
-
-
-
-
-
 
 export default Album;
