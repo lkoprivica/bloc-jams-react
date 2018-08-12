@@ -55,6 +55,20 @@ onMouseEnter(){
 onMouseLeave(){
   this.setState({isMouseInside: false });
 }
+hover(){
+  if (song.onMouseEnter){
+   <ion-icon name="play"></ion-icon> === {index + 1};
+  }
+//The currently playing song displays a "pause" button in place of the song number.
+  else if (this.state.isPlaying === true && song.onMouseLeave){
+    <ion-icon name="pause"></ion-icon> === {index + 1}
+  }
+//A paused song displays a "play" button in place of the song number.
+  else if (this.state.isPlaying === false && song.onMouseEnter){
+     <ion-icon name="play"></ion-icon> === {index + 1}
+  }
+}
+
 
   render() {
     return (
@@ -85,28 +99,13 @@ onMouseLeave(){
           }
         </tbody>
       </table>
-      </section>
-//assignment audio playback
-//When I hover over a song, it displays a "play" button in place of the song number.
-if (song.hover){
-  return <ion-icon name="play"></ion-icon>
-}
-//The currently playing song displays a "pause" button in place of the song number.
-else if (song.state.isPlaying === true){
-    return <ion-icon name="pause"></ion-icon>
-}
-//A paused song displays a "play" button in place of the song number.
-else if (song.state.isPlaying === false){
-    return <ion-icon name="play"></ion-icon>
-}
-
       <span className="ion-md-play" />
       <span className="ion-md-pause" />
+      </section>
 
-
-
-
-
+//assignment audio playback
+//When I hover over a song, it displays a "play" button in place of the song number.
+//create a hover function to put this inside of
 
     );
   }
