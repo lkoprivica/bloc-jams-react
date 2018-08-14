@@ -49,28 +49,17 @@ class Album extends Component {
     };
   }
 
-onMouseEnter(){
-  this.setState({isMouseInside: true });
-}
-onMouseLeave(){
-  this.setState({isMouseInside: false });
-}
-hover(){
-  if (song.onMouseEnter){
-   <ion-icon name="play"></ion-icon> === {index + 1};
-  }
-//The currently playing song displays a "pause" button in place of the song number.
-  else if (this.state.isPlaying === true && song.onMouseLeave){
-    <ion-icon name="pause"></ion-icon> === {index + 1}
-  }
-//A paused song displays a "play" button in place of the song number.
-  else if (this.state.isPlaying === false && song.onMouseEnter){
-     <ion-icon name="play"></ion-icon> === {index + 1}
+  //assignmeny audio playback
+hover(song){
+  this.setState({currentlyHoveredSong: song });
+  if(this.state.onMouseEnter){
+    album.song === //songNumber;
   }
 }
-
 
   render() {
+    console.log("the currentSong is",this.state.currentSong)
+console.log("the currentlyHoveredSong is",this.state.currentlyHoveredSong)
     return (
       <section className="album">
       <section id="album-info">
@@ -91,21 +80,18 @@ hover(){
         <tbody>
           {this.state.album.songs.map((song, index) =>
            <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
+           <span className="ion-md-play"  onMouseEnter={() => this.hover(song)}/>
+           <span className="ion-md-pause"  onMouseLeave={() => this.hover(song)}/>
            <td>{index + 1}</td>
            <td>{song.title}</td>
            <td>{song.duration}</td>
+
            </tr>
           )
           }
         </tbody>
       </table>
-      <span className="ion-md-play" />
-      <span className="ion-md-pause" />
       </section>
-
-//assignment audio playback
-//When I hover over a song, it displays a "play" button in place of the song number.
-//create a hover function to put this inside of
 
     );
   }
