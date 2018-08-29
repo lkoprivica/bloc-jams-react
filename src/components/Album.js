@@ -54,19 +54,18 @@ class Album extends Component {
 
   }
 
-  getIcon(song, index){
-    console.log(song, index)
-    if(song.hover && song.isPlaying){
-      index === <span className="ion-md-pause"/>
-    }
-    else if(song.pause){
-      return (<span className="ion-md-play"/>)
-    }
-    else{
-      console.log(index)
-      return index + 1;
-    }
-}
+  songButtons(song) {
+     if (this.state.currentSong === song) {
+        if (this.state.currentlyHoveredSong) {
+          return 'ion-md-play';
+        } else {
+          return 'ion-md-pause';
+        }
+      }
+    return 'song';
+
+  }
+
   render() {
     console.log("the currentSong is",this.state.currentSong)
 console.log("the currentlyHoveredSong is",this.state.currentlyHoveredSong)
@@ -92,18 +91,8 @@ console.log("the currentlyHoveredSong is",this.state.currentlyHoveredSong)
           {this.state.album.songs.map((song, index) =>
            <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
            <td>{/*}{this.getIcon(song, index)}*/}
-               <span className={this.state.currentlyHoveredSong == song ? "ion-md-play" : "ion-md-pause"}
-                onMouseEnter = { () => this.hover(song)}
+               <span className= {this.songButtons(index)} onMouseEnter = {() => this.hover(song)}
                />
-               {/*{
-                 if(this.state.currentlyHoveredSong){
-                   <span>index</span>
-                 }
-                    }
-               </span> */}
-
-
-
            </td>
            <td>{song.title}</td>
            <td>{song.duration}</td>
