@@ -51,25 +51,25 @@ class Album extends Component {
 
   hover(song){
     this.setState({currentlyHoveredSong: song });
-
+console.log("{song} was hovered over!");
   }
 
   songButtons(song) {
-     if (this.state.currentSong === song) {
+     if (this.state.currentSong === 'index + 1') {
         if (this.state.currentlyHoveredSong) {
           return 'ion-md-play';
-        } else {
+        } else{
           return 'ion-md-pause';
         }
-      }
-    return 'song';
+    return 'index + 1';
 
-  }
+   }
+ }
 
   render() {
     console.log("the currentSong is",this.state.currentSong)
 console.log("the currentlyHoveredSong is",this.state.currentlyHoveredSong)
-
+console.log(this.hover)
     return (
       <section className="album">
       <section id="album-info">
@@ -90,10 +90,11 @@ console.log("the currentlyHoveredSong is",this.state.currentlyHoveredSong)
         <tbody>
           {this.state.album.songs.map((song, index) =>
            <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-           <td>{/*}{this.getIcon(song, index)}*/}
+           <td>{index + 1}
                <span className= {this.songButtons(index)} onMouseEnter = {() => this.hover(song)}
                />
            </td>
+
            <td>{song.title}</td>
            <td>{song.duration}</td>
            </tr>
