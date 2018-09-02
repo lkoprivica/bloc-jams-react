@@ -90,8 +90,8 @@ console.log(this.hover)
         <tbody>
           {this.state.album.songs.map((song, index) =>
            <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-           <td>{index + 1}
-               <span className= {this.songButtons(index)} onMouseEnter = {() => this.hover(song)}
+           <td onMouseEnter = {() => this.hover(song)} > {index + 1}
+               <span className= {this.songButtons(index)}
                />
            </td>
 
