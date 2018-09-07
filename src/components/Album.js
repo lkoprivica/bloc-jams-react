@@ -47,13 +47,11 @@ class Album extends Component {
      this.audioElement.removeEventListener('volumeupdate',this.eventListeners.volumeupdate);
    }
 //assignment range input
-    volumeControl(){
-      this.audioElement.addEventListener('volumeupdate', (e) =>  {
-          this.setState({currentVolume: this.audioElement.currentVolume});
-      });
-    }
-
-
+  //  volumeControl(){
+    //  this.audioElement.addEventListener('volumeupdate', (e) =>  {
+    //      this.setState({currentVolume: this.audioElement.currentVolume});
+      //});
+    //}
 
     play() {
       this.audioElement.play();
@@ -102,8 +100,9 @@ class Album extends Component {
        this.setState({ currentTime: newTime });
      }
 
-     handleVolumeChange(){
-       const newVolume = this.audioElement.currentVolume;
+     handleVolumeChange(e){
+       const newVolume = this.audioElement.currentVolume * e.target.value;
+       this.audioElement.currentVolume = newVolume;
        this.setState({currentVolume: newVolume});
      }
 
@@ -180,16 +179,15 @@ class Album extends Component {
       <PlayerBar
            isPlaying={this.state.isPlaying}
            currentSong={this.state.currentSong}
-           currentTime={formatTime(this.audioElement.currentTime)}
+           currentTime={this.formatTime(this.audioElement.currentTime)}
            duration={this.audioElement.duration}
            currentVolume={this.audioElement.currentVolume}
-           formatTime={this.state.isPlaying}//
+           formatTime={this.state.isPlaying}
            handleSongClick={() => this.handleSongClick(this.state.currentSong)}
            handlePrevClick={()=> this.handlePrevClick()}
-           //assignment player bar songButton
            handleNextClick={() => this.handleNextClick()}
            handleTimeChange={(e) => this.handleTimeChange(e)}
-           handleVolumeChange={() => this.handleVolumeChange()}
+           handleVolumeChange={(e) => this.handleVolumeChange(e)}
          />
       </section>
 
