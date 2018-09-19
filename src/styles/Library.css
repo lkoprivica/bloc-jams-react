@@ -1,0 +1,11 @@
+div{
+  color: grey;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+img{
+  border-radius: 25px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
