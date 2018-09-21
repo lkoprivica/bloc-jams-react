@@ -12,7 +12,7 @@ class App extends Component {
         <header>
           <nav>
             <Link to='/'>Landing</Link>
-            <Link to='/library'>Library</Link>
+            <Link to='/library'> Library</Link>
           </nav>
           <h1>Bloc Jams</h1>
         </header>
@@ -21,7 +21,7 @@ class App extends Component {
           <Route path="/library" component={Library} />
           <Route path="/album/:slug" component={Album} />
         </main>
-      </div>
+        </div>
     );
   }
 }

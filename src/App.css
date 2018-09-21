@@ -16,6 +16,20 @@
 
 .App-title {
   font-size: 1.5em;
+
+}
+a:link{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+a:visited{
+  color: black;
+}
+
+a:hover{
+  color: grey;
 }
 
 .App-intro {
@@ -25,4 +39,24 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+h1{
+  font-family: monospace;
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: 2px 2px 8px grey;
+}
+
+nav {
+  background-color: #404040;
+  background-size: 300px 100px;
+  text-align: left;
+  font-family: monospace;
+  padding: 15px;
+}
+
+img{
+  border-radius: 15px;
 }

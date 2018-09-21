@@ -1,0 +1,40 @@
+#album-title {
+  font-family: monospace;
+  color: black;
+  font-weight: bold;
+}
+
+h2.artist{
+  color: grey;
+  font-family: monospace;
+}
+
+#release-info {
+  font-family: monospace;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+#song-list{
+color: grey;
+font-family: monospace;
+font-weight: normal;
+font-size: 20px;
+margin: 0 auto;
+margin-bottom: 50px;
+width: 205px;
+
+background: rgba(25, 25, 25, .5)
+
+}
+
+#buttons {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.player-bar {
+  width: 175px;
+  margin: 0 auto;
+  color: black;
+}

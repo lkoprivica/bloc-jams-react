@@ -1,0 +1,46 @@
+
+h1.hero-title {
+  color: #262626;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 42px
+}
+
+h2.point-title{
+  color:  black;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+p.point-description{
+  color: #999999;
+  font-family: monospace;
+}
+
+body{
+  background-image: url("/assets/images/blurred_backgrounds/blue-clear-close-up-133175.jpg");
+}
+
+.hero-title-wrapper {
+  position: relative;
+}
+
+.hero-title-wrapper img{
+  object-fit: cover;
+  width: 350px;
+  border-radius: 200px;
+  height: 350px;
+  opacity: 0.9;
+}
+
+.hero-title-wrapper .hero-title {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.landing-banner {
+  margin-bottom: 25px;
+}
