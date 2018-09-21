@@ -3,6 +3,8 @@ import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 import  "../styles/Album.css";
 
+
+
 class Album extends Component {
   constructor(props) {
     super(props);
@@ -146,18 +148,21 @@ class Album extends Component {
 
      render() {
    return (
+
+     <div class = "container-fluid">
      <section className="album row">
-     <div class = "col-sm-6">
+     <div class = "col align-self-start">
      <section id="album-info">
         <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
         <div className="album-details">
          <h1 id="album-title">{this.state.album.title}</h1>
          <h2 className="artist">{this.state.album.artist}</h2>
          <div id="release-info">{this.state.album.releaseInfo}</div>
-        </div>
+         </div>
      </section>
-     </div>
-<div class = "col-md-6">
+</div>
+
+<div class="col align-self-center">
      <table id="song-list">
        <colgroup>
          <col id="song-number-column" />
@@ -179,7 +184,7 @@ class Album extends Component {
        </tbody>
 
      </table>
-</div>
+
      <PlayerBar
           isPlaying={this.state.isPlaying}
           currentSong={this.state.currentSong}
@@ -193,9 +198,11 @@ class Album extends Component {
           handleTimeChange={(e) => this.handleTimeChange(e)}
           handleVolumeChange={(e) => this.handleVolumeChange(e)}
         />
+        </div>
 
      </section>
 
+</div>
    );
  }
 }

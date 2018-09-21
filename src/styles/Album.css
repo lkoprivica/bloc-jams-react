@@ -1,11 +1,11 @@
 #album-title {
   font-family: monospace;
-  color: #4B0082;
+  color: black;
   font-weight: bold;
 }
 
 h2.artist{
-  color: #4B0082;
+  color: grey;
   font-family: monospace;
 }
 
@@ -16,15 +16,25 @@ h2.artist{
 }
 
 #song-list{
-color: #4B0082;
+color: grey;
 font-family: monospace;
-font-weight: bold;
-font-size: large;
-margin-bottom: 15px;
+font-weight: normal;
+font-size: 20px;
+margin: 0 auto;
+margin-bottom: 50px;
+width: 205px;
+
+background: rgba(25, 25, 25, .5)
 
 }
 
 #buttons {
   color: black;
   margin-bottom: 10px;
+}
+
+.player-bar {
+  width: 175px;
+  margin: 0 auto;
+  color: black;
 }

@@ -4,9 +4,11 @@ import "../styles/Landing.css"
 const Landing = () => (
 
  <section className="landing row">
- <div className="col-sm-12">
- <img src = "images/black-and-white-close-up-close-up-view-21323.JPG" />
+ <div className="col-sm-4 col-sm-offset-4 landing-banner">
+ <div className="hero-title-wrapper"> 
+ <img src = "assets/images/blurred_backgrounds/black-and-white-close-up-close-up-view-21323.JPG" />
   <h1 className="hero-title">Turn the music up!</h1>
+  </div>
  </div>
 
   <section className="selling-points row">
