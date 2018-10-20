@@ -149,9 +149,9 @@ class Album extends Component {
      render() {
    return (
 
-     <div class = "container-fluid">
+     <div className = "container-fluid">
      <section className="album row">
-     <div class = "col align-self-start">
+     <div className = "col align-self-start">
      <section id="album-info">
         <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
         <div className="album-details">
@@ -162,7 +162,7 @@ class Album extends Component {
      </section>
 </div>
 
-<div class="col align-self-center">
+<div className="col align-self-center">
      <table id="song-list">
        <colgroup>
          <col id="song-number-column" />
@@ -177,7 +177,7 @@ class Album extends Component {
               {this.songButtons(song, index)}
           </td>
           <td>{song.title}</td>
-          <td>{this.formatTime(song.duration)}</td>  
+          <td>{this.formatTime(song.duration)}</td>
           </tr>
          )
          }
